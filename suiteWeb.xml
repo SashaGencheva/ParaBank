@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite Web">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="http://localhost:8081/parabank/index.htm"/>
+    <test verbose="2" preserve-order="true" name="ParaBank Web">
+        <classes>
+            <class name="tests.LoginPageTests">
+                <methods>
+                    <include name="successfulLogin"/>
+                    <include name="successfulLogout"/>
+                    <include name="unsuccessfulLogin"/>
+                </methods>
+            </class>
+            <class name="tests.RegistrationPageTests">
+                <methods>
+                    <include name="emptyRegistration"/>
+                    <include name="mismatchingPasswordsRegistration"/>
+                    <include name="successfulRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

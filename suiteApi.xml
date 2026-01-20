@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite Api">
+    <test verbose="2" preserve-order="true" name="ParaBank Api">
+        <classes>
+            <class name="tests.LoginApiTests">
+                <methods>
+                    <include name="successfulLoginApiTest"/>
+                    <include name="unsuccessfulLoginApiTest"/>
+                </methods>
+            </class>
+            <class name="tests.GetUserDetailsApiTest">
+                <methods>
+                    <include name="getUserDetailsApiTest"/>
+                </methods>
+            </class>
+            <class name="tests.GetUserAccountsApiTest">
+                <methods>
+                    <include name="getUserAccountsApiTest"/>
+                </methods>
+            </class>
+            <class name="tests.PayBillApiTest">
+                <methods>
+                    <include name="payBillApiTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
